@@ -3,8 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const HOST = "127.0.0.1";
-const PORT = 8000;
+const HOST = "0.0.0.0";
+const PORT = Number(process.env.PORT || 8000);
 const BASE_DIR = __dirname;
 const DATA_FILE = path.join(BASE_DIR, "db.json");
 const SESSION_DAYS = 7;

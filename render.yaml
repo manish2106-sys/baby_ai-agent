@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: prasee-service-solution
+    runtime: docker
+    repo: https://github.com/manish2106-sys/baby_ai-agent
+    rootDir: prasee-website
+    plan: free
+    healthCheckPath: /api/health
