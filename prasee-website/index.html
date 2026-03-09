@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prasee Service and Solution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1>Prasee Service and Solution</h1>
+      <button id="logoutBtn" class="ghost-btn hidden">Log out</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Automation Tools + Smart Services</p>
+          <h2>Turn your ideas into real digital solutions.</h2>
+          <p>
+            We help people and teams share what they need, then build and provide automation tools,
+            services, and custom workflows to solve real business problems.
+          </p>
+        </div>
+        <div class="hero-card">
+          <h3>What we provide</h3>
+          <ul>
+            <li>Process automation tools</li>
+            <li>Custom service solutions</li>
+            <li>Idea-to-product support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container cards">
+        <article class="card">
+          <h3>Business Automation</h3>
+          <p>Save time by automating repeated tasks and data flow across your systems.</p>
+        </article>
+        <article class="card">
+          <h3>Software Services</h3>
+          <p>Get practical web and digital solutions based on your exact requirements.</p>
+        </article>
+        <article class="card">
+          <h3>Idea Consultation</h3>
+          <p>Share your idea and get a clear technical direction with implementation support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portal">
+      <div class="container portal-grid">
+        <div class="auth-box">
+          <div class="tab-row">
+            <button class="tab-btn active" data-target="signupForm">Create account</button>
+            <button class="tab-btn" data-target="loginForm">Login</button>
+          </div>
+
+          <form id="signupForm" class="auth-form active">
+            <label>
+              Full name
+              <input type="text" id="signupName" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="signupEmail" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="signupPassword" minlength="6" required />
+            </label>
+            <button type="submit" class="primary-btn">Create account</button>
+          </form>
+
+          <form id="loginForm" class="auth-form">
+            <label>
+              Email
+              <input type="email" id="loginEmail" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="loginPassword" required />
+            </label>
+            <button type="submit" class="primary-btn">Login</button>
+          </form>
+
+          <p id="authStatus" class="status-text"></p>
+        </div>
+
+        <div class="idea-box">
+          <h3>Share your required idea</h3>
+          <p class="muted">Login first, then tell us what you want to build or automate.</p>
+          <form id="ideaForm">
+            <label>
+              Idea title
+              <input type="text" id="ideaTitle" required />
+            </label>
+            <label>
+              What do you need?
+              <textarea id="ideaDetail" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="primary-btn">Submit idea</button>
+          </form>
+          <p id="ideaStatus" class="status-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideas-list-wrap">
+      <div class="container">
+        <h3>Submitted Ideas</h3>
+        <div id="ideasList" class="ideas-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Prasee Service and Solution - We sell and provide automation tools.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
